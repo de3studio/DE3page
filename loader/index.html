@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loader :></title>
+  </head>
+  <body>
+    <div style="">
+      <div style="display: flex">
+        <input style="height: 30px; width: 500px" id="cdf" type="text" />
+        <button onclick="load()">send</button>
+      </div>
+      <iframe
+        id="loader"
+        style="width: 800px; height: 250px; border: 0; overflow: hidden"
+        scrolling="no"
+        src="https://loader.to/api/card/?url=https://www.youtube.com/watch?v=OUHVRWdVQCI&adUrl=https://myAdurl.com"
+      ></iframe>
+    </div>
+
+    <script>
+      function load() {
+        const a = document.getElementById("cdf").value;
+        console.log(a);
+
+        document.getElementById("loader").src =
+          "https://loader.to/api/card/?url=" + a;
+      }
+    </script>
+  </body>
+</html>
