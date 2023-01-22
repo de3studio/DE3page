@@ -21,15 +21,13 @@
     </div>
 
     <script>
-      const a = document.getElementById("cdf").style.color
-      console.log(a);
       function load() {
+        const a = document.getElementById("cdf").value;
+        console.log(a);
+
         document.getElementById("loader").src =
           "https://loader.to/api/card/?url=" + a;
       }
-
-
-
     </script>
   </body>
 </html>
