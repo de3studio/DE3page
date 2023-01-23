@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>1</h1>
+    <div>
+      <input style="height: 30px; width: 500px" id="cdf1" type="text" />
+    </div>
+    <h1>2</h1>
+    <div>
+      <input style="height: 30px; width: 500px" id="cdf2" type="text" />
+    </div>
+    <h1>3</h1>
+    <div>
+      <input style="height: 30px; width: 500px" id="cdf3" type="text" />
+    </div>
+    <button
+      style="height: 30px; width: 500px"
+      type="button"
+      onclick="myFunction()"
+    >
+      send
+    </button>
+
+    <script>
+      hash("Hadi12345Alkurdi99(%)2002tGG@@#$!!DGB!").then((hash) => console.log(hash));
+      async function hash(string) {
+        const utf8 = new TextEncoder().encode(string);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", utf8);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray
+          .map((bytes) => bytes.toString(16).padStart(2, "0"))
+          .join("");
+        return hashHex;
+      }
+      function myFunction() {
+        let vedioslist = {
+          vedio1: "LFWWLvkB3mE",
+          vedio2: "LFWWLvkB3mE",
+          vedio3: "LFWWLvkB3mE",
+        };
+        const a = document.getElementById("cdf1").value;
+        const b = document.getElementById("cdf2").value;
+        const c = document.getElementById("cdf3").value;
+
+        vedioslist.vedio1 = a;
+        vedioslist.vedio2 = b;
+        vedioslist.vedio3 = c;
+
+        const url = "https://nodejsvido.vercel.app/";
+        const options = {
+          method: "POST",
+          headers: {
+            Accept: "*/*",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            vedioslist,
+          }),
+        };
+
+        fetch(url, options).then((response) => {
+          console.log(response.status);
+        });
+      }
+    </script>
+  </body>
+</html>
