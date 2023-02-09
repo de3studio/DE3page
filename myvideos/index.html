@@ -19,38 +19,35 @@
     <div>
       <input style="height: 30px; width: 500px" id="cdf3" type="text" />
     </div>
+    <h1>password</h1>
+    <div>
+      <input style="height: 30px; width: 500px" id="password" type="text" />
+    </div>
     <button
       style="height: 30px; width: 500px"
       type="button"
       onclick="myFunction()"
     >
-      send
+      send!
     </button>
 
     <script>
-      hash("Hadi12345Alkurdi99(%)2002tGG@@#$!!DGB!").then((hash) => console.log(hash));
-      async function hash(string) {
-        const utf8 = new TextEncoder().encode(string);
-        const hashBuffer = await crypto.subtle.digest("SHA-256", utf8);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashHex = hashArray
-          .map((bytes) => bytes.toString(16).padStart(2, "0"))
-          .join("");
-        return hashHex;
-      }
       function myFunction() {
         let vedioslist = {
           vedio1: "LFWWLvkB3mE",
           vedio2: "LFWWLvkB3mE",
           vedio3: "LFWWLvkB3mE",
+          password: "",
         };
         const a = document.getElementById("cdf1").value;
         const b = document.getElementById("cdf2").value;
         const c = document.getElementById("cdf3").value;
+        const password = document.getElementById("password").value;
 
         vedioslist.vedio1 = a;
         vedioslist.vedio2 = b;
         vedioslist.vedio3 = c;
+        vedioslist.password = password;
 
         const url = "https://nodejsvido.vercel.app/";
         const options = {
