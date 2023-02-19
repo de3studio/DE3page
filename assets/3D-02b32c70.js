@@ -1,4 +1,4 @@
-import{a as l}from"./axios-a900fd7e.js";import{_ as n,r as c,o as p,c as f,a as e,b as s,w as o,F as h,d as a,e as r}from"./index-ae17eef4.js";const g={methods:{gefe(){this.iframeString=`<iframe
+import{a as l}from"./axios-a900fd7e.js";import{_ as n,r as c,o as p,c as f,a as e,b as s,w as o,F as h,d as a,e as r}from"./index-f7e551ab.js";const g={methods:{gefe(){this.iframeString=`<iframe
           style="
             position: absolute;
             top: 0;
